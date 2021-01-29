@@ -1,4 +1,5 @@
-import Head from "next/head";
+import Head from 'next/head';
+import PropTypes from 'prop-types';
 
 export const Header = ({
   title,
@@ -7,7 +8,7 @@ export const Header = ({
   shouldIndexPage = true,
 }) => {
   const pageTitle = `${title} | @gisabernardess`;
-  const pageImage = image ? image : null;
+  const pageImage = image || null;
 
   return (
     <Head>
@@ -37,6 +38,19 @@ export const Header = ({
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1920" />
       <meta property="og:image:height" content="1080" />
+
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet"
+      />
     </Head>
   );
+};
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  shouldIndexPage: PropTypes.bool,
 };
