@@ -1,40 +1,48 @@
 import styled from "styled-components";
 
 import {
-  GitHubCorner,
   Footer,
+  GitHubCorner,
+  Header,
   QuizBackground,
   QuizLogo,
   Widget,
 } from "../src/components";
 
-import db from "../db.json";
+import api from "../src/services/api";
 
 export default function Home() {
   return (
-    <QuizBackground backgroundImage={db.bg}>
-      <QuizContainer>
-        <QuizLogo />
-        <Widget>
-          <Widget.Header>
-            <h1>{db.title}</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <p>{db.description}</p>
-          </Widget.Content>
-        </Widget>
+    <>
+      <Header
+        title="SAO Quiz!"
+        description="Quiz Time! Imersão Alura React Next.js"
+        image={api.bg}
+      />
+      <QuizBackground backgroundImage={api.bg}>
+        <QuizContainer>
+          <QuizLogo />
+          <Widget>
+            <Widget.Header>
+              <h1>{api.title}</h1>
+            </Widget.Header>
+            <Widget.Content>
+              <p>{api.description}</p>
+            </Widget.Content>
+          </Widget>
 
-        <Widget>
-          <Widget.Content>
-            <h1>Quizes da Galera</h1>
+          <Widget>
+            <Widget.Content>
+              <h1>Quizes da Galera</h1>
 
-            <p>lorem ipsum dolor sit amet...</p>
-          </Widget.Content>
-        </Widget>
-        <Footer />
-      </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/omariosouto" />
-    </QuizBackground>
+              <p>lorem ipsum dolor sit amet...</p>
+            </Widget.Content>
+          </Widget>
+          <Footer />
+        </QuizContainer>
+        <GitHubCorner projectUrl="https://github.com/gisabernardess/imersao-aluraquiz" />
+      </QuizBackground>
+    </>
   );
 }
 

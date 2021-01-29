@@ -13,18 +13,22 @@ const SVGWrapper = styled.svg`
   fill: #9ccc65;
   color: ${({ theme }) => theme.colors.contrastText};
   cursor: pointer;
+
   &:hover .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
   }
+
   @keyframes octocat-wave {
     0%,
     100% {
       transform: rotate(0);
     }
+
     20%,
     60% {
       transform: rotate(-25deg);
     }
+
     40%,
     80% {
       transform: rotate(10deg);
@@ -34,6 +38,7 @@ const SVGWrapper = styled.svg`
     &:hover .octo-arm {
       animation: none;
     }
+
     & .octo-arm {
       animation: octocat-wave 560ms ease-in-out;
     }
@@ -42,7 +47,12 @@ const SVGWrapper = styled.svg`
 
 export const GitHubCorner = ({ projectUrl }) => (
   <Wrapper>
-    <a href={projectUrl} target="_blank" rel="noreferrer">
+    <a
+      href={projectUrl}
+      target="_blank"
+      rel="noreferrer"
+      alt="Project on Github"
+    >
       <SVGWrapper
         className="githubCorner"
         width="80"
