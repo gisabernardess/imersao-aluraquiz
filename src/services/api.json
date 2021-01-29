@@ -1,7 +1,7 @@
 {
   "bg": "https://www.wallpapertip.com/wmimgs/46-466223_season-1-kirito-and-asuna-sao.jpg",
   "title": "Quiz Time!",
-  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+  "description": "Teste os seus conhecimentos sobre Sword Art Online:",
   "questions": [
     {
       "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
@@ -25,7 +25,7 @@
   "theme": {
     "colors": {
       "primary": "#e53935",
-      "secondary": "#ffb74d",
+      "secondary": "#ffc477",
       "mainBg": "#00000070",
       "contrastText": "#FFFFFF",
       "wrong": "#FF5722",

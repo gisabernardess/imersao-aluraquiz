@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
   background-color: #00000070;
+  border: 1px solid ${({ theme }) => theme.colors.primary};
   padding: 20px;
   display: flex;
   align-items: center;
@@ -33,7 +34,7 @@ export const Footer = (props) => (
       />
     </a>
     <p>
-      Orgulhosamente criado durante a{" "}
+      Orgulhosamente criado durante a{' '}
       <a alt="Alura website" href="https://www.alura.com.br/">
         <span>Imersão React da Alura</span>
       </a>
